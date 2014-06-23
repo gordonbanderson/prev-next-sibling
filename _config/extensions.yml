@@ -1,0 +1,6 @@
+---
+Name: weboftalent-prevnextsibling-extension
+---
+Page_Controller:
+  extensions:
+    ['PrevNextSiblingExtension']

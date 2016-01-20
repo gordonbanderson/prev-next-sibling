@@ -1,4 +1,21 @@
 # Previous and Next Sibling
+[![Build Status](https://travis-ci.org/gordonbanderson/prev-next-sibling.svg?branch=master)](https://travis-ci.org/gordonbanderson/prev-next-sibling)
+[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/gordonbanderson/prev-next-sibling/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/gordonbanderson/prev-next-sibling/?branch=master)
+[![Code Coverage](https://scrutinizer-ci.com/g/gordonbanderson/prev-next-sibling/badges/coverage.png?b=master)](https://scrutinizer-ci.com/g/gordonbanderson/prev-next-sibling/?branch=master)
+[![Build Status](https://scrutinizer-ci.com/g/gordonbanderson/prev-next-sibling/badges/build.png?b=master)](https://scrutinizer-ci.com/g/gordonbanderson/prev-next-sibling/build-status/master)
+[![codecov.io](https://codecov.io/github/gordonbanderson/prev-next-sibling/coverage.svg?branch=master)](https://codecov.io/github/gordonbanderson/prev-next-sibling?branch=master)
+
+[![Latest Stable Version](https://poser.pugx.org/weboftalent/prevnextsibling/version)](https://packagist.org/packages/weboftalent/prevnextsibling)
+[![Latest Unstable Version](https://poser.pugx.org/weboftalent/prevnextsibling/v/unstable)](//packagist.org/packages/weboftalent/prevnextsibling)
+[![Total Downloads](https://poser.pugx.org/weboftalent/prevnextsibling/downloads)](https://packagist.org/packages/weboftalent/prevnextsibling)
+[![License](https://poser.pugx.org/weboftalent/prevnextsibling/license)](https://packagist.org/packages/weboftalent/prevnextsibling)
+[![Monthly Downloads](https://poser.pugx.org/weboftalent/prevnextsibling/d/monthly)](https://packagist.org/packages/weboftalent/prevnextsibling)
+[![Daily Downloads](https://poser.pugx.org/weboftalent/prevnextsibling/d/daily)](https://packagist.org/packages/weboftalent/prevnextsibling)
+
+[![Dependency Status](https://www.versioneye.com/php/weboftalent:prevnextsibling/badge.svg)](https://www.versioneye.com/php/weboftalent:prevnextsibling)
+[![Reference Status](https://www.versioneye.com/php/weboftalent:prevnextsibling/reference_badge.svg?style=flat)](https://www.versioneye.com/php/weboftalent:prevnextsibling/references)
+
+![codecov.io](https://codecov.io/github/gordonbanderson/prev-next-sibling/branch.svg?branch=master)
 
 ## Maintainers
 

@@ -1,21 +1,26 @@
 {
-	"name": "weboftalent/prevnextsibling",
-	"description": "Helper method and template to allow previous and next sibling integration easily",
-	"type": "silverstripe-module",
-	"keywords": ["silverstripe", "siblings", "template", "helper"],
-	"authors": [
-		{
-			"name": "Gordon Anderson",
-			"email": "gordon.b.anderson@gmail.com",
-			"homepage": "https://github.com/gordonbanderson/wot-prevnext-sibling",
-			"role": "Developer"
-		}
-	],
-    "support": {
-        "issues": "https://github.com/gordonbanderson/wot-flickr/wot-prevnext-sibling"
-    },
-	"require":
-	{
-		"silverstripe/framework": "~3.1"
-	}
+  "name": "weboftalent/prevnextsibling",
+  "description": "Helper method and template to allow previous and next sibling integration easily",
+  "type": "silverstripe-module",
+  "keywords": [
+    "silverstripe",
+    "siblings",
+    "template",
+    "helper"
+  ],
+  "authors": [
+    {
+      "name": "Gordon Anderson",
+      "email": "gordon.b.anderson@gmail.com",
+      "homepage": "https://github.com/gordonbanderson/wot-prevnext-sibling",
+      "role": "Developer"
+    }
+  ],
+  "support": {
+    "issues": "https://github.com/gordonbanderson/wot-flickr/wot-prevnext-sibling"
+  },
+  "require": {
+    "silverstripe/framework": "~3.1"
+  },
+  "license": "BSD-3-Clause"
 }

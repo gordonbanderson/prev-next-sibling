@@ -28,7 +28,7 @@ common parent.  It is used for paging through a list of children items.
  
 ##Installation
 ```bash
-composer require weboftalent/prev-next-sibling
+composer require "weboftalent/prev-next-sibling:~1"
 ```
 ##Usage
 ##Previous Sibling

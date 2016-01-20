@@ -1,0 +1,20 @@
+Page:
+  parentpage:
+    Title: Parent Page
+    Content: This page will have some children
+    Sort: 1
+  child01:
+    Title: Child 01
+    Content: First child
+    Parent: =>Page.parentpage
+    Sort: 1
+  child02:
+    Title: Chld 02
+    Content: Second child
+    Parent: =>Page.parentpage
+    Sort: 2
+  child03:
+    Title: Chld 03
+    Content: Third child
+    Parent: =>Page.parentpage
+    Sort: 3

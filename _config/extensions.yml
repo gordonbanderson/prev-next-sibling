@@ -1,6 +1,6 @@
 ---
 Name: weboftalent-prevnextsibling-extension
 ---
-Page_Controller:
+SiteTree:
   extensions:
     ['PrevNextSiblingExtension']

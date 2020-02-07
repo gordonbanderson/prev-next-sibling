@@ -1,39 +1,42 @@
 {
-	"name": "weboftalent/prevnextsibling",
-	"description": "Helper method and template to allow previous and next sibling integration easily",
-	"type": "silverstripe-vendormodule",
-	"keywords": [
-		"silverstripe",
-		"siblings",
-		"template",
-		"helper"
-	],
-	"authors": [{
-		"name": "Gordon Anderson",
-		"email": "gordon.b.anderson@gmail.com",
-		"homepage": "https://github.com/gordonbanderson/prev-next-sibling",
-		"role": "Developer"
-	}],
-	"support": {
-		"issues": "https://github.com/gordonbanderson/prev-next-sibling"
-	},
-	"require": {
-		"php": "~7",
-		"silverstripe/framework": "~4"
-	},
-	"require-dev": {
-		"phpunit/phpunit": "^5.7"
-	},
-
+    "name": "weboftalent/prevnextsibling",
+    "description": "Helper method and template to allow previous and next sibling integration easily",
+    "type": "silverstripe-vendormodule",
+    "keywords": [
+        "silverstripe",
+        "siblings",
+        "template",
+        "helper"
+    ],
+    "authors": [
+        {
+            "name": "Gordon Anderson",
+            "email": "gordon.b.anderson@gmail.com",
+            "homepage": "https://github.com/gordonbanderson/prev-next-sibling",
+            "role": "Developer"
+        }
+    ],
+    "support": {
+        "issues": "https://github.com/gordonbanderson/prev-next-sibling"
+    },
+    "require": {
+        "php": "~7",
+        "silverstripe/framework": "~4",
+        "silverstripe/recipe-cms": "4.x-dev"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^5.7"
+    },
     "autoload": {
         "psr-4": {
             "WebOfTalent\\PrevNextSibling\\": "src/",
             "WebOfTalent\\PrevNextSibling\\Tests\\": "tests/"
         }
     },
-
-	"extra": {
-		"installer-name": "prevnextsibling"
-	}
-	"license": "BSD-3-Clause"
+    "extra": {
+        "installer-name": "prevnextsibling"
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "license": "BSD-3-Clause"
 }

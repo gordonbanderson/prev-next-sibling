@@ -1,8 +1,11 @@
 <?php
-/**
- * Previous and next sibling helper methods.
- */
-class PrevNextSiblingExtension extends DataExtension
+
+namespace WebOfTalent\PrevNextSibling;
+
+use SilverStripe\CMS\Model\SiteTree;
+use SilverStripe\Core\Extension;
+
+class PrevNextSiblingExtension extends Extension
 {
     public function NextSibling()
     {

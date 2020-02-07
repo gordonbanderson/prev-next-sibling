@@ -1,6 +1,6 @@
 ---
 Name: weboftalent-prevnextsibling-extension
 ---
-SiteTree:
+SilverStripe\CMS\Model\SiteTree:
   extensions:
-    ['PrevNextSiblingExtension']
+    - WebOfTalent\PrevNextSibling\PrevNextSiblingExtension

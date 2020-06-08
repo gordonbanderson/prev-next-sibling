@@ -5,7 +5,7 @@ RUN apt search libxslt1.1
 RUN apt -y install figlet git zip unzip libxslt1-dev libxslt1.1
 
 # alter bash prompt
-ENV PS1A="\u@php_travis_enhancer.test:\w> "
+ENV PS1A="\u@prev_next_sibling.test:\w> "
 RUN echo 'PS1=$PS1A' >> ~/.bashrc
 
 # intro message when attaching to shell
@@ -16,11 +16,10 @@ RUN curl -sS https://getcomposer.org/installer | php && mv composer.phar /usr/lo
     composer global require hirak/prestissimo --no-plugins --no-scripts
 
 # Missing PHP extensions
-RUN docker-php-ext-install mysqli && docker-php-ext-install xsl
+RUN docker-php-ext-install mysqli && docker-php-ext-install xsl && docker-php-ext-install intl
 
 # Cleanup
 RUN apt-get -y autoremove && apt-get -y clean
 
 # Prevent the container from exiting
 CMD tail -f /dev/null
-

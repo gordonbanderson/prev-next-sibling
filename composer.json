@@ -32,7 +32,8 @@
     },
     "require-dev": {
         "phpunit/phpunit": "^5.7",
-        "suilven/php-travis-enhancer": "dev-INTEGRATION"
+        "suilven/php-travis-enhancer": "dev-INTEGRATION",
+        "league/climate": "^3.5"
     },
     "autoload": {
         "psr-4": {

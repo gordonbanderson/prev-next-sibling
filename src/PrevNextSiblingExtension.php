@@ -13,18 +13,20 @@ use SilverStripe\Core\Extension;
  */
 class PrevNextSiblingExtension extends Extension
 {
+    /** @phpstan-ignore-next-line */
     public function NextSibling(): ?\SilverStripe\ORM\DataObject
     {
         $where = "\"ParentID\" = {$this->owner->ParentID} AND \"Sort\" > {$this->owner->Sort}";
 
-        return SiteTree::get()->where($where)->sort('"Sort"')->First();
+        return SiteTree::get()->where($where)->sort('"Sort"')->first();
     }
 
-    
+
+    /** @phpstan-ignore-next-line */
     public function PreviousSibling(): ?\SilverStripe\ORM\DataObject
     {
         $where = "\"ParentID\" = {$this->owner->ParentID} AND \"Sort\" < {$this->owner->Sort}";
 
-        return SiteTree::get()->where($where)->sort('"Sort" DESC')->First();
+        return SiteTree::get()->where($where)->sort('"Sort" DESC')->first();
     }
 }

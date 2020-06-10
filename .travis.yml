@@ -26,25 +26,25 @@ matrix:
             env: 'DB=MYSQL RECIPE_VERSION=4.4.x-dev PHPUNIT_COVERAGE_TEST=1'
         -
             php: 7.3
-            env: 'DB=MYSQL RECIPE_VERSION=4.4.x-dev PHPUNIT_TEST=1'
+            env: 'DB=MYSQL RECIPE_VERSION=4.5.x-dev PHPUNIT_TEST=1'
         -
             php: 7.3
-            env: 'DB=MYSQL RECIPE_VERSION=4.x-dev PHPUNIT_TEST=1'
+            env: 'DB=MYSQL RECIPE_VERSION=4.5-dev PHPUNIT_TEST=1'
         -
             php: 7.3
             env: 'DB=MYSQL RECIPE_VERSION=4.x-dev PHPCS_TEST=1'
         -
             php: 7.4
-            env: LINT_CHECK=1
+            env: LINT_CHECK=1 RECIPE_VERSION=4.5.x-dev
         -
             php: 7.4
-            env: PHPCS_TEST=1
+            env: PHPCS_TEST=1 RECIPE_VERSION=4.5.x-dev
         -
             php: 7.4
-            env: PHPSTAN_TEST=1
+            env: PHPSTAN_TEST=1 RECIPE_VERSION=4.5.x-dev
         -
             php: 7.4
-            env: DUPLICATE_CODE_CHECK=1
+            env: DUPLICATE_CODE_CHECK=1 RECIPE_VERSION=4.5.x-dev
 before_script:
     - 'psql -c ''create database travis_ci_test;'' -U postgres'
     - 'phpenv rehash'
@@ -59,6 +59,8 @@ before_script:
     - 'vendor/bin/sake dev/build flush=all'
     - 'php vendor/silverstripe/framework/tests/dump_constants.php'
     - 'if [[ $DUPLICATE_CODE_CHECK ]]; then sudo apt remove -y nodejs && curl -sL https://deb.nodesource.com/setup_14.x -o nodesource_setup.sh && sudo bash nodesource_setup.sh && sudo apt install -y build-essential nodejs && which npm && npm install jscpd@3.2.1  ;fi'
+install:
+    - 'composer global require hirak/prestissimo'
 script:
     - 'if [[ $PHPUNIT_TEST ]]; then vendor/bin/phpunit -d memory_limit=4G  tests/ '''' flush=1; fi'
     - 'if [[ $PHPUNIT_COVERAGE_TEST ]]; then phpdbg -qrr vendor/bin/phpunit -d memory_limit=4G --coverage-clover=coverage.xml   tests/ '''' flush=1  ; fi'

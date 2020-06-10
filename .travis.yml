@@ -29,7 +29,7 @@ matrix:
             env: 'DB=MYSQL RECIPE_VERSION=4.4.x-dev PHPUNIT_TEST=1'
         -
             php: 7.4
-            env: 'DB=PGSQL RECIPE_VERSION=4.5.x--dev PHPUNIT_TEST=1'
+            env: 'DB=PGSQL RECIPE_VERSION=4.4.x--dev PHPUNIT_TEST=1'
         -
             php: 7.3
             env: 'DB=MYSQL RECIPE_VERSION=4.x-dev PHPCS_TEST=1'

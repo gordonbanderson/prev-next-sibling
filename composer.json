@@ -20,12 +20,16 @@
         "issues": "https://github.com/gordonbanderson/prev-next-sibling"
     },
     "require": {
-        "php": "~7",
-        "silverstripe/framework": "~4",
-        "silverstripe/recipe-cms": "4.x-dev"
+        "php": "~7.1",
+        "silverstripe/cms": "^4"
     },
     "require-dev": {
-        "phpunit/phpunit": "^5.7"
+        "phpunit/phpunit": "^5.7",
+        "slevomat/coding-standard": "^7.0",
+        "php-parallel-lint/php-parallel-lint": "^1.3",
+        "php-parallel-lint/php-console-highlighter": "^0.5.0",
+        "phpstan/phpstan-strict-rules": "^1.1",
+        "phpstan/extension-installer": "^1.1"
     },
     "autoload": {
         "psr-4": {
@@ -38,5 +42,12 @@
     },
     "minimum-stability": "dev",
     "prefer-stable": true,
-    "license": "BSD-3-Clause"
+    "license": "BSD-3-Clause",
+    "scripts": {
+        "checkcs": "vendor/bin/phpcs --standard=ruleset.xml --extensions=php --tab-width=4 -sp src tests",
+        "fixcs": "vendor/bin/phpcbf --standard=ruleset.xml --extensions=php --tab-width=4 -sp src tests",
+        "checkCode": "composer checkcs && composer lint && composer phpstan",
+        "lint": "vendor/bin/parallel-lint src/ tests/",
+        "phpstan": "vendor/bin/phpstan analyse --level=8 -c tests/phpstan.neon src/"
+    }
 }

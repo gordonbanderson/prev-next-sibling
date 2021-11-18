@@ -9,12 +9,18 @@ use SilverStripe\Core\Extension;
 use SilverStripe\ORM\DataObject;
 
 // @phpcs:disable PSR1.Methods.CamelCapsMethodName.NotCamelCaps
+
+/**
+ * @property int $ParentID database ID of the parent object
+ * @property int $Sort a number to indicate the sort order, which should be unique
+ */
 class PrevNextSiblingExtension extends Extension
 {
     // @phpstan-ignore-next-line
     public function NextSibling(): ?DataObject
     {
-        $where = "\"ParentID\" = {$this->owner->ParentID} AND \"Sort\" > {$this->owner->Sort}";
+        // @phpstan-ignore-next-line
+        $where = "\"ParentID\" = {$this->getOwner()->ParentID} AND \"Sort\" > {$this->getOwner()->Sort}";
 
         return SiteTree::get()->where($where)->sort('"Sort"')->first();
     }
@@ -22,7 +28,8 @@ class PrevNextSiblingExtension extends Extension
     // @phpstan-ignore-next-line
     public function PreviousSibling(): ?DataObject
     {
-        $where = "\"ParentID\" = {$this->owner->ParentID} AND \"Sort\" < {$this->owner->Sort}";
+        // @phpstan-ignore-next-line
+        $where = "\"ParentID\" = {$this->getOwner()->ParentID} AND \"Sort\" < {$this->getOwner()->Sort}";
 
         return SiteTree::get()->where($where)->sort('"Sort" DESC')->first();
     }

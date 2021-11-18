@@ -6,10 +6,12 @@ namespace WebOfTalent\PrevNextSibling;
 
 use SilverStripe\CMS\Model\SiteTree;
 use SilverStripe\Core\Extension;
+use SilverStripe\ORM\DataObject;
 
+// @phpcs:disable PSR1.Methods.CamelCapsMethodName.NotCamelCaps
 class PrevNextSiblingExtension extends Extension
 {
-    public function NextSibling()
+    public function NextSibling(): DataObject
     {
         $where = "\"ParentID\" = {$this->owner->ParentID} AND \"Sort\" > {$this->owner->Sort}";
 
@@ -17,7 +19,7 @@ class PrevNextSiblingExtension extends Extension
     }
 
 
-    public function PreviousSibling()
+    public function PreviousSibling(): DataObject
     {
         $where = "\"ParentID\" = {$this->owner->ParentID} AND \"Sort\" < {$this->owner->Sort}";
 

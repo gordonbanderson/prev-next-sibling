@@ -11,18 +11,19 @@ use SilverStripe\ORM\DataObject;
 // @phpcs:disable PSR1.Methods.CamelCapsMethodName.NotCamelCaps
 class PrevNextSiblingExtension extends Extension
 {
-    public function NextSibling(): DataObject
+    // @phpstan-ignore-next-line
+    public function NextSibling(): ?DataObject
     {
         $where = "\"ParentID\" = {$this->owner->ParentID} AND \"Sort\" > {$this->owner->Sort}";
 
-        return SiteTree::get()->where($where)->sort('"Sort"')->First();
+        return SiteTree::get()->where($where)->sort('"Sort"')->first();
     }
 
-
-    public function PreviousSibling(): DataObject
+    // @phpstan-ignore-next-line
+    public function PreviousSibling(): ?DataObject
     {
         $where = "\"ParentID\" = {$this->owner->ParentID} AND \"Sort\" < {$this->owner->Sort}";
 
-        return SiteTree::get()->where($where)->sort('"Sort" DESC')->First();
+        return SiteTree::get()->where($where)->sort('"Sort" DESC')->first();
     }
 }

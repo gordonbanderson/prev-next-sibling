@@ -11,9 +11,6 @@
 [![Monthly Downloads](https://poser.pugx.org/weboftalent/prevnextsibling/d/monthly)](https://packagist.org/packages/weboftalent/prevnextsibling)
 [![Daily Downloads](https://poser.pugx.org/weboftalent/prevnextsibling/d/daily)](https://packagist.org/packages/weboftalent/prevnextsibling)
 
-[![Dependency Status](https://www.versioneye.com/php/weboftalent:prevnextsibling/badge.svg)](https://www.versioneye.com/php/weboftalent:prevnextsibling)
-[![Reference Status](https://www.versioneye.com/php/weboftalent:prevnextsibling/reference_badge.svg?style=flat)](https://www.versioneye.com/php/weboftalent:prevnextsibling/references)
-
 ![codecov.io](https://codecov.io/github/gordonbanderson/prev-next-sibling/branch.svg?branch=main)
 
 ## Maintainers
